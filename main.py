@@ -7,7 +7,7 @@ from audio_processor import AudioProcessor
 
 def main():
     # 1. Settings
-    VIDEO_PATH = "/Users/charan/Desktop/Caption-Generator/Vid to text v1/test_video.mp4"  # Replace with your video
+    VIDEO_PATH = "test_video.mp4"  # Replace with your video
     GROUND_TRUTH_ANSWER = "A man in a red shirt is playing a guitar." # For evaluation testing
     
     if not os.path.exists(VIDEO_PATH):
