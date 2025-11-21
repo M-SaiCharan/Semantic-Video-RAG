@@ -11,3 +11,4 @@ evaluate
 sacrebleu
 rouge_score
 sentence-transformers
+streamlit-agraph
