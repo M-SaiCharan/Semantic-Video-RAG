@@ -11,7 +11,7 @@ from captioning import VideoCaptioner
 from rag_engine import RAGChatbot
 
 # --- 1. PAGE CONFIG & CUSTOM CSS ---
-st.set_page_config(page_title="NeuroVision AI", page_icon="🧠", layout="wide")
+st.set_page_config(page_title="SV-RAG", page_icon="👀", layout="wide")
 
 # Custom CSS for Dark Theme & Glassmorphism
 st.markdown("""
@@ -71,7 +71,7 @@ if "graph_data" not in st.session_state:
 
 # --- SIDEBAR ---
 with st.sidebar:
-    st.title("NeuroVision AI")
+    st.title("SV-RAG")
     st.caption("Semantic Video Analysis Pipeline")
     st.divider()
     
