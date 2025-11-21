@@ -1,0 +1,13 @@
+torch
+torchvision
+transformers
+opencv-python
+Pillow
+scikit-learn
+langchain
+langchain-community
+faiss-cpu
+evaluate
+sacrebleu
+rouge_score
+sentence-transformers
