@@ -1,6 +1,6 @@
 from langchain_community.vectorstores import FAISS
 from langchain_community.embeddings import HuggingFaceEmbeddings
-from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain.docstore.document import Document
 from transformers import pipeline
 from langchain_community.llms import HuggingFacePipeline
@@ -42,12 +42,11 @@ class RAGChatbot:
         docs = self.vector_store.similarity_search(query, k=4)
         context = "\n".join([d.page_content for d in docs])
         
-        # --- DEBUGGING (Look at your terminal!) ---
+        # Debugging logs
         print(f"\n[DEBUG] Question: {query}")
-        print(f"[DEBUG] Retrieved Context: {context[:200]}...") # Print first 200 chars
+        print(f"[DEBUG] Retrieved Context: {context[:200]}...") 
         
-        # --- THE FIX: QUESTION FIRST, CONTEXT LAST ---
-        # Flan-T5 works best when it sees the Question immediately.
+        # Optimized Prompt for Flan-T5
         prompt = f"""
         Answer the question using only the context provided below.
         
